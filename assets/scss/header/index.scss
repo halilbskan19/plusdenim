@@ -5,6 +5,7 @@
     top: 0;
     background-color: $primary;
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
+    z-index: 99;
 
     &__wrapper {
         display: flex;
@@ -63,6 +64,7 @@
                 display: block;
                 padding: 30px;
                 color: $white;
+                text-decoration: none;
 
                 &:hover {
                     background-color: $primary_light;
@@ -103,7 +105,7 @@
         }
 
         .languagesSelect {
-            padding: 0 16px 5px;
+            padding: 0 16px;
             background-color: transparent;
             border: none;
             font-size: 16px;
@@ -129,7 +131,7 @@
 
 /* Responsiveness */
 
-@media (min-width: 768px) {
+@media (min-width: 1200px) {
     .header {
         &__wrapper {
             .navigation {
@@ -143,6 +145,7 @@
             .menu {
                 display: flex;
                 border-right: 1px solid $white;
+                margin: 0;
 
                 a:hover {
                     background-color: $primary_light;

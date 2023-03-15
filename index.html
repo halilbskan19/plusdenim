@@ -3,7 +3,10 @@
   <head>
     <title>PLUSDENIM.COM</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
     <link
       rel="apple-touch-icon"
       sizes="57x57"
@@ -84,7 +87,18 @@
     <meta name="msapplication-navbutton-color" content="#d52b1e" />
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#d52b1e" />
-    <link rel="stylesheet" type="text/css" href="/assets/scss/util.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/scss/util-dist.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+      integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" type="text/css" href="/assets/css/index.css" />
     <!-- Javascripts -->
     <script
@@ -96,7 +110,7 @@
 
   <body onload="onLoad()">
     <header class="header">
-      <div class="container">
+      <div class="container-fluid">
         <div class="header__wrapper">
           <a href="/" class="logo">
             <img
@@ -127,13 +141,207 @@
         </div>
       </div>
     </header>
-    <main>
+    <main class="main">
+      <section class="banner">
+        <img
+          src="/public/images/empty.jpg"
+          alt=""
+          title=""
+          width="100%"
+          height="400"
+        />
+      </section>
       <div class="container">
-        <article>
-          <h1>Some content</h1>
-          <p>More Content</p>
-        </article>
+        <section class="cards">
+          <div class="card">
+            <img
+              src="/public/images/empty.jpg"
+              alt=""
+              title=""
+              width="250"
+              height="250"
+            />
+            <div class="explanation">
+              <h2>Title 1</h2>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+                recusandae suscipit consequatur enim quo totam officiis repellat
+                iusto delectus accusantium ipsa quaerat, eaque impedit corporis
+                ad! Dicta, in. Quos, beatae! Sapiente sit officiis praesentium
+                voluptate iste, voluptates, quasi numquam eum magnam commodi
+                officia culpa, nisi tempore corrupti incidunt earum quibusdam?
+              </p>
+            </div>
+          </div>
+          <div class="card card--right">
+            <img
+              src="/public/images/empty.jpg"
+              alt=""
+              title=""
+              width="250"
+              height="250"
+            />
+            <div class="explanation">
+              <h2>Title 2</h2>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+                recusandae suscipit consequatur enim quo totam officiis repellat
+                iusto delectus accusantium ipsa quaerat, eaque impedit corporis
+                ad! Dicta, in. Quos, beatae! Sapiente sit officiis praesentium
+                voluptate iste, voluptates, quasi numquam eum magnam commodi
+                officia culpa, nisi tempore corrupti incidunt earum quibusdam?
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img
+              src="/public/images/empty.jpg"
+              alt=""
+              title=""
+              width="250"
+              height="250"
+            />
+            <div class="explanation">
+              <h2>Title 3</h2>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+                recusandae suscipit consequatur enim quo totam officiis repellat
+                iusto delectus accusantium ipsa quaerat, eaque impedit corporis
+                ad! Dicta, in. Quos, beatae! Sapiente sit officiis praesentium
+                voluptate iste, voluptates, quasi numquam eum magnam commodi
+                officia culpa, nisi tempore corrupti incidunt earum quibusdam?
+              </p>
+            </div>
+          </div>
+          <div class="card card--right">
+            <img
+              src="/public/images/empty.jpg"
+              alt=""
+              title=""
+              width="250"
+              height="250"
+            />
+            <div class="explanation">
+              <h2>Title 4</h2>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod
+                recusandae suscipit consequatur enim quo totam officiis repellat
+                iusto delectus accusantium ipsa quaerat, eaque impedit corporis
+                ad! Dicta, in. Quos, beatae! Sapiente sit officiis praesentium
+                voluptate iste, voluptates, quasi numquam eum magnam commodi
+                officia culpa, nisi tempore corrupti incidunt earum quibusdam?
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
+      <section class="band">
+        <div class="container">
+          <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h4>
+        </div>
+      </section>
+      <section class="carousel">
+        <div class="container">
+          <div class="carousel-wrapper">
+            <div class="owl-carousel owl-carousel1 owl-theme">
+              <div>
+                <div class="card text-center">
+                  <img
+                    class="card-img-top"
+                    src="https://images.unsplash.com/photo-1572561300743-2dd367ed0c9a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=300&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=300"
+                    alt=""
+                  />
+                  <div class="card-body">
+                    <h5>
+                      Ronne Galle <br />
+                      <span> Project Manager </span>
+                    </h5>
+                    <p class="card-text">
+                      “ Nam libero tempore, cum soluta nobis est eligendi optio
+                      cumque nihil impedit quo minus id quod maxime placeat ”
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card text-center">
+                  <img
+                    class="card-img-top"
+                    src="https://images.unsplash.com/photo-1588361035994-295e21daa761?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=301&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=301"
+                    alt=""
+                  />
+                  <div class="card-body">
+                    <h5>
+                      Missy Limana<br />
+                      <span> Engineer </span>
+                    </h5>
+                    <p class="card-text">
+                      “ Nam libero tempore, cum soluta nobis est eligendi optio
+                      cumque nihil impedit quo minus id quod maxime placeat ”
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card text-center">
+                  <img
+                    class="card-img-top"
+                    src="https://images.unsplash.com/photo-1575377222312-dd1a63a51638?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=302&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=302"
+                    alt=""
+                  />
+                  <div class="card-body">
+                    <h5>
+                      Martha Brown<br />
+                      <span> Project Manager </span>
+                    </h5>
+                    <p class="card-text">
+                      “ Nam libero tempore, cum soluta nobis est eligendi optio
+                      cumque nihil impedit quo minus id quod maxime placeat ”
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div class="card text-center">
+                  <img
+                    class="card-img-top"
+                    src="https://images.unsplash.com/photo-1549836938-d278c5d46d20?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=303&ixid=eyJhcHBfaWQiOjF9&ixlib=rb-1.2.1&q=50&w=303"
+                    alt=""
+                  />
+                  <div class="card-body">
+                    <h5>
+                      Hanna Lisem<br />
+                      <span> Project Manager </span>
+                    </h5>
+                    <p class="card-text">
+                      “ Nam libero tempore, cum soluta nobis est eligendi optio
+                      cumque nihil impedit quo minus id quod maxime placeat ”
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+    <footer class="footer">
+      <div class="container-fluid">
+        <div class="footer__wrapper">
+          <div class="copyright" id="Copyright">
+            © 2023 PlusDenim. All Rights Reserved.
+          </div>
+          <div class="social-media"></div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="/assets/js/carousel/index.js"></script>
   </body>
 </html>

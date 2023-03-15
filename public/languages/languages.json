@@ -3,12 +3,15 @@
         "langdesc": "English",
 		"WhoWeAre": "WHO WE ARE",
 		"WhatWeDo": "WHAT WE DO",
-		"Contact": "CONTACT"
+		"Contact": "CONTACT",
+		"Copyright": "© 2023 PlusDenim. All Rights Reserved."
 	},
 	"de": {
         "langdesc": "Deutsch",
 		"WhoWeAre": "WER WIR SIND",
 		"WhatWeDo": "WAS WIR TUN",
-		"Contact": "KONTAKT"
+		"Contact": "KONTAKT",
+		"Copyright": "Empty"
+
 	}
 }
