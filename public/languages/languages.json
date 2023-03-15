@@ -1,0 +1,14 @@
+{
+	"en": {
+        "langdesc": "English",
+		"WhoWeAre": "WHO WE ARE",
+		"WhatWeDo": "WHAT WE DO",
+		"Contact": "CONTACT"
+	},
+	"de": {
+        "langdesc": "Deutsch",
+		"WhoWeAre": "WER WIR SIND",
+		"WhatWeDo": "WAS WIR TUN",
+		"Contact": "KONTAKT"
+	}
+}

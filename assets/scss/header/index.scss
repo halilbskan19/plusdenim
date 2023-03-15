@@ -1,10 +1,10 @@
-@import '../shared/colors';
+@import "../shared/colors";
 
 .header {
     position: sticky;
     top: 0;
     background-color: $primary;
-    box-shadow: 0 0 3px 3px rgba(0, 0, 0, .15);
+    box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
 
     &__wrapper {
         display: flex;
@@ -14,6 +14,28 @@
 
         .logo {
             display: flex;
+        }
+
+        .side-menu {
+            display: none;
+        }
+
+        .side-menu:checked ~ .navigation {
+            max-height: 100%;
+        }
+
+        .side-menu:checked ~ .hamb .hamb-line {
+            background: transparent;
+        }
+
+        .side-menu:checked ~ .hamb .hamb-line::before {
+            transform: rotate(-45deg);
+            top: 0;
+        }
+
+        .side-menu:checked ~ .hamb .hamb-line::after {
+            transform: rotate(45deg);
+            top: 0;
         }
 
         .navigation {
@@ -30,24 +52,16 @@
             display: block;
             padding: 30px;
             color: $white;
-
         }
 
         .menu a:hover {
             background-color: $primary_light;
         }
-
-        .navigation {
-            max-height: 0;
-            transition: max-height .5s ease-out;
-        }
-
+        
         .hamb {
             cursor: pointer;
-            float: right;
             padding: 40px 20px;
         }
-
 
         .hamb-line {
             background: $white;
@@ -55,17 +69,16 @@
             height: 2px;
             position: relative;
             width: 24px;
-
         }
 
         .hamb-line::before,
         .hamb-line::after {
             background: $white;
-            content: '';
+            content: "";
             display: block;
             height: 100%;
             position: absolute;
-            transition: all .2s ease-out;
+            transition: all 0.2s ease-out;
             width: 100%;
         }
 
@@ -77,32 +90,12 @@
             top: -5px;
         }
 
-
-        .side-menu {
-            display: none;
-        }
-
-        .side-menu:checked~.navigation {
-            max-height: 100%;
-        }
-
-        .side-menu:checked~.hamb .hamb-line {
-            background: transparent;
-        }
-
-        .side-menu:checked~.hamb .hamb-line::before {
-            transform: rotate(-45deg);
-            top: 0;
-
-        }
-
-        .side-menu:checked~.hamb .hamb-line::after {
-            transform: rotate(45deg);
-            top: 0;
+        .navigation {
+            max-height: 0;
+            transition: max-height 0.5s ease-out;
         }
     }
 }
-
 
 /* Responsiveness */
 
@@ -110,23 +103,20 @@
     .header {
         &__wrapper {
             .navigation {
-                max-height: none;
-                top: 0;
                 position: relative;
-                float: right;
-                width: fit-content;
-                background-color: transparent;
-
+                display: flex;
+                justify-content: end;
+                top: 0;
+                max-height: none;
             }
 
-            .menu li {
-                float: left;
+            .menu {
+                display: flex;
             }
 
             .menu a:hover {
                 background-color: $primary_light;
                 color: $white;
-
             }
 
             .hamb {
@@ -134,5 +124,4 @@
             }
         }
     }
-
 }
