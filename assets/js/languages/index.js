@@ -2,7 +2,25 @@ var multilang;
 
 function onLoad() {
   // create object, load JSON file, default to 'nl', and callback to initList when ready loading
-  multilang = new MultiLang("/public/languages/languages.json", "en", this.initList);
+  multilang = new MultiLang(
+    "/public/languages/languages.json",
+    localStorage.getItem("selectedLanguages"),
+    this.initList
+  );
+
+  setTimeout(() => {
+    const selectOptions =
+      document.getElementsByName("listlanguages")[0].options;
+
+    if (selectOptions) {
+      for (let i = 0; i < selectOptions.length; i++) {
+        const e = selectOptions[i];
+        if (localStorage.getItem("selectedLanguages") == e.value) {
+          e.selected = true;
+        }
+      }
+    }
+  }, 100);
 
   // alternatively
   //multilang = new MultiLang('languages.json', null, this.initList); // default to browser language
@@ -12,6 +30,7 @@ function onLoad() {
 function langSelectChange(sel) {
   // switch to selected language code
   multilang.setLanguage(sel.value);
+  localStorage.setItem("selectedLanguages", sel.value);
 
   // refresh labels
   refreshLabels();
