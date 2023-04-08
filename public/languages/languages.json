@@ -1,17 +1,34 @@
 {
 	"en": {
         "langdesc": "English",
-		"WhoWeAre": "WHO WE ARE",
-		"WhatWeDo": "WHAT WE DO",
-		"Contact": "CONTACT",
+		"AboutUs": "About Us",
+		"WhatWeDo": "What We Do",
+		"Contact": "Contact",
+		"BannerTitle": "Welcome to PLUS-DENIM.",
+		"BannerTitle2": "We offer solutions for small and middle size Fashion Companies and Brands wishing to make real their ideas. We materialize your idea so people can wear it!",
+		"WhoWeAre": "Who We Are",
+		"WhoWeAreExplanation": "We are an experienced apparel Fashion Company with a motivated and dynamic team, we were born in 2018 as a cause of the necessity of the market to have lower volume production with high premium finish. (Not easy to find inner Türkiye), we, as part of SCALATEKS Textile company decided to create PLUS-DENIM for the customers we couldn’t serve before due to the MOQ (minimum order requirement). We did not want to keep aside the customers with low-capacity orders but with good products. We know we could work side by side. Unlike SCALATEKS we offer to our small and middle sizes client’s solutions for production, full sourcing for low to middle volume orders. We guarantee our high standards production quality for each garment that leaves our facilities.",
+		"Sourcing": "Sourcing",
+		"GarmentStockCollection": "Garment stock collection",
+		"SourcingOfFabrics": "Sourcing of fabrics",
+		"FabricSalesResearchAndDevelopment": "Fabric sales research and development",
+		"QualityControl": "Quality control",
 		"Copyright": "© 2023 PlusDenim. All Rights Reserved."
 	},
 	"de": {
         "langdesc": "Deutsch",
-		"WhoWeAre": "WER WIR SIND",
-		"WhatWeDo": "WAS WIR TUN",
-		"Contact": "KONTAKT",
+		"AboutUs": "Über Uns",
+		"WhatWeDo": "Was Machen Wir",
+		"Contact": "Kontakt",
+		"BannerTitle": "Willkommen bei PLUS-DENIM.",
+		"BannerTitle2": "Wir bieten Lösungen für kleine und mittlere Modeunternehmen und Marken, die ihre Ideen verwirklichen möchten. Wir materialisieren Ihre Idee, damit die Leute sie tragen können!",
+		"WhoWeAre": "Wer Sind Wir",
+		"WhoWeAreExplanation": "Wir sind ein erfahrenes Modeunternehmen für Bekleidung mit einem motivierten und dynamischen Team. Wir wurden 2018 aus der Notwendigkeit des Marktes geboren, eine Produktion in geringeren Stückzahlen mit einer hochwertigen Verarbeitung zu haben. (Nicht leicht innerhalb von Türkei zu finden), haben wir uns als Teil der SCALATEKS Textile Company entschieden, PLUS-DENIM für die Kunden zu kreieren, die wir vorher aufgrund der Mindestbestellmenge (MOQ) nicht bedienen konnten. Wir wollten die Kunden nicht mit kapazitätsarmen Aufträgen, sondern mit guten Produkten abschrecken. Wir wissen, dass wir Seite an Seite arbeiten könnten. Im Gegensatz zu SCALATEKS bieten wir unseren kleinen und mittleren Kunden Lösungen für die Produktion und vollständige Beschaffung für Aufträge mit geringem bis mittlerem Volumen an. Wir garantieren unsere hohe Produktionsqualität für jedes Kleidungsstück, das unsere Einrichtungen verlässt.",
+		"Sourcing": "Beschaffung",
+		"GarmentStockCollection": "Sammlung von Kleidungsstücken",
+		"SourcingOfFabrics": "Beschaffung von Stoffen",
+		"FabricSalesResearchAndDevelopment": "Stoffverkaufsforschung und -entwicklung",
+		"QualityControl": "Qualitätskontrolle",
 		"Copyright": "Empty"
-
 	}
 }

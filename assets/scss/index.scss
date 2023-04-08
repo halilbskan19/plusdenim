@@ -1,45 +1,96 @@
-@import "../scss/shared/carousel.scss";
+@import "../scss/shared/colors";
 
 .main {
-    .banner {
-        margin-bottom: 30px;
+    display: grid;
+    grid-gap: 40px;
 
-        img {
-            width: 100%;
-            height: 200px;
+    .banner {
+        height: calc(100vh - 80px);
+        background-image: url("/public/images/banner.jpg");
+        background-size: cover;
+        background-position: 40% 0;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+
+        &__title {
+            max-width: 85%;
+            text-align: right;
+            padding-right: 15px;
+            color: $white;
+            font-size: 26px;
+            font-weight: 600;
+
+            &--red {
+                color: $primary_light;
+            }
         }
     }
 
-    .cards {
-        display: grid;
-        grid-gap: 50px;
-        margin-bottom: 30px;
+    .section {
+        padding: 100px 0;
 
-        .card {
+        &__wrapper {
             display: grid;
-            grid-template-columns: 1fr;
-            align-items: center;
-            grid-gap: 10px;
-            border: none;
-            box-shadow: 0 8px 30px -7px #e5e5e5;
-            padding: 30px 20px;
-            border-radius: 20px;
-            border: 0;
+            grid-gap: 15px;
+        }
 
-            img {
-                width: 100%;
-                height: 80px;
-                border-radius: 5px 5px 0 0;
+        &__title {
+            position: relative;
+            font-size: 24px;
+            width: max-content;
+            color: $primary;
+            font-weight: 300;
+
+            &::after {
+                content: "";
+                height: 2px;
+                width: 105%;
+                position: absolute;
+                background: $primary;
+                bottom: 0;
+                left: 0;
+            }
+        }
+
+        &--about-us {
+            padding: 0;
+        }
+
+        &--what-we-do {
+            background-image: url("/public/images/what-we-do-banner.jpg");
+            background-size: cover;
+            background-position: center top;
+            height: 550px;
+
+            .section__wrapper {
+                display: grid;
+                justify-content: end;
             }
 
-            .explanation {
-                h2 {
-                    font-size: 18px;
-                }
+            .section__title {
+                width: 100%;
+                color: $primary_light;
+                text-align: center;
+                font-size: 42px;
 
-                p {
-                    font-size: 14px;
+                &::after {
+                    max-width: 150px;
+                    left: calc(50% - 75px);
+                    bottom: -2px;
+                    background-color: $primary_light;
                 }
+            }
+
+            .list {
+                width: 100%;
+                color: $white;
+                font-size: 24px;
+                padding-right: 20px;
+                text-align: center;
+                display: grid;
+                grid-gap: 10px;
             }
         }
     }
@@ -53,7 +104,6 @@
         background-image: url("/public/images/empty.jpg");
         background-size: cover;
         background-position: center center;
-        margin-bottom: 30px;
 
         h4 {
             font-weight: 300;
@@ -65,52 +115,18 @@
 
 @media screen and (min-width: 768px) {
     .main {
+        grid-gap: 100px;
+
         .banner {
-            margin-bottom: 100px;
-
-            img {
-                height: 250px;
-            }
-        }
-
-        .cards {
-            max-width: 1200px;
-            margin: 0 auto;
-            margin-bottom: 100px;
-
-            .card {
-                grid-template-columns: auto 1fr;
-                grid-gap: 20px;
-                grid-template-areas: "a b";
-                align-items: start;
-
-                img {
-                    height: 150px;
-                    border-radius: 10px;
-                }
-
-                &--right {
-                    grid-template-columns: auto auto;
-                    grid-template-areas: "b a";
-
-                    .explanation {
-                        text-align: right;
-                    }
-                }
-
-                img {
-                    grid-area: a;
-                }
-
-                .explanation {
-                    grid-area: b;
-                }
+            &__title {
+                max-width: 60%;
+                padding-right: 50px;
+                font-size: 32px;
             }
         }
 
         .band {
             height: 150px;
-            margin-bottom: 100px;
 
             h4 {
                 font-size: 18px;
@@ -122,14 +138,12 @@
 @media screen and (min-width: 1200px) {
     .main {
         .banner {
-            img {
-                height: 500px;
-            }
-        }
+            background-position: center center;
 
-        .cards {
-            grid-template-columns: 1fr 1fr;
-            grid-gap: 50px 25px;
+            &__title {
+                padding-right: 100px;
+                font-size: 44px;
+            }
         }
     }
 }
