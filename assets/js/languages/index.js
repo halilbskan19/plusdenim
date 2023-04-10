@@ -67,7 +67,7 @@ function refreshLabels() {
     // get id current elements
     var idname = allnodes[i].id;
     // if id exists, set get id current elements
-    if (idname != "") {
+    if (idname != "" && idname != "linkAboutUs" && idname != "linkWhatWeDo" && idname != "linkContact") {
       allnodes[i].textContent = multilang.get(idname);
     }
   }

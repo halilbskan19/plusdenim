@@ -88,6 +88,18 @@
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#d52b1e" />
     <link rel="stylesheet" type="text/css" href="/assets/scss/util-dist.css" />
+    <!-- Required Core Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.core.min.css"
+    />
+
+    <!-- Optional Theme Stylesheet -->
+    <link
+      rel="stylesheet"
+      href="node_modules/@glidejs/glide/dist/css/glide.theme.min.css"
+    />
+
     <link rel="stylesheet" type="text/css" href="/assets/css/index.css" />
     <!-- Javascripts -->
     <script
@@ -117,9 +129,17 @@
 
           <nav class="navigation">
             <ul class="menu">
-              <li><a href="#" id="AboutUs">Who We Are</a></li>
-              <li><a href="#" id="WhatWeDo">What We Do</a></li>
-              <li><a href="#" id="Contact">Contact</a></li>
+              <li>
+                <a href="#linkAboutUs" id="AboutUs" uk-scroll="offset: 300"></a>
+              </li>
+              <li>
+                <a
+                  href="#linkWhatWeDo"
+                  id="WhatWeDo"
+                  uk-scroll="offset: 100"
+                ></a>
+              </li>
+              <li><a href="#linkContact" id="Contact"></a></li>
             </ul>
             <select
               class="languagesSelect"
@@ -135,7 +155,7 @@
         <h1 class="banner__title banner__title--red" id="BannerTitle"></h1>
         <h2 class="banner__title" id="BannerTitle2"></h2>
       </section>
-      <section class="section section--about-us">
+      <section class="section section--about-us" id="linkAboutUs">
         <div class="container">
           <div class="section__wrapper">
             <h2 class="section__title" id="WhoWeAre"></h2>
@@ -143,7 +163,7 @@
           </div>
         </div>
       </section>
-      <section class="section section--what-we-do">
+      <section class="section section--what-we-do" id="linkWhatWeDo">
         <div class="container">
           <div class="section__wrapper">
             <h2 class="section__title" id="WhatWeDo"></h2>
@@ -159,12 +179,116 @@
       </section>
       <section class="band">
         <div class="container">
-          <h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</h4>
+          <div class="band__wrapper">
+            <h4 id="HowWeDoIt"></h4>
+            <p id="SourcingDevelopText"></p>
+            <a
+              href="pages/how-we-do-it/index.html"
+              class="btn"
+              id="ReadMore"
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section class="section section--certificates">
+        <div class="container">
+          <div class="section__wrapper">
+            <h2 class="section__title" id="Sustainability"></h2>
+            <p class="section__explanation">
+              <span id="SustainabilityText1"></span>
+              <br />
+              <span id="SustainabilityText2"></span>
+            </p>
+            <p class="section__explanation">
+              <span class="certificates"><b id="Gots"></b></span><b>:</b>
+              <span id="GotsText"></span>
+            </p>
+            <p class="section__explanation">
+              <span class="certificates"><b id="Grs"></b></span><b>:</b>
+              <span id="GrsText"></span>
+            </p>
+            <p class="section__explanation">
+              <span class="certificates"><b id="Ocs"></b></span><b>:</b>
+              <span id="OcsText"></span>
+            </p>
+            <p class="section__explanation">
+              <span class="certificates"><b id="Rcs"></b></span><b>:</b>
+              <span id="RcsText"></span>
+            </p>
+            <p class="section__explanation">
+              <span class="certificates"><b id="Bci"></b></span><b>:</b>
+              <span id="BciText"></span>
+            </p>
+            <p class="section__explanation">
+              <span class="certificates"><b id="Sedex"></b></span><b>:</b>
+              <span id="SedexText"></span>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section section--main-customers">
+        <div class="container">
+          <div class="section__wrapper">
+            <h2 class="section__title" id="OurMainCustomers"></h2>
+            <div class="slider-container">
+              <div class="glide multi1">
+                <div class="glide__track" data-glide-el="track">
+                  <ul class="glide__slides">
+                    <li class="glide__slide">
+                      <div class="glide-card">
+                        <img src="public/images/customers/Logo-Adolfo-Dominguez.png" alt="Adolfo Dominguez">
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="glide-card">
+                        <img src="public/images/customers/Logo-Froens.png" alt="Froens">
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="glide-card">
+                        <img src="public/images/customers/Logo-Inditex.png" alt="Inditex">
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="glide-card">
+                        <img src="public/images/customers/Logo-Ivy-Oak.png" alt="Ivy Oak">
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="glide-card">
+                        <img src="public/images/customers/Logo-Monastery.png" alt="Monastery">
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="glide-card">
+                        <img src="public/images/customers/Logo-NP-2.png" alt="NP">
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="glide-card">
+                        <img src="public/images/customers/Logo-Simons.png" alt="Simons">
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="glide-card">
+                        <img src="public/images/customers/Logo-Unity-Stores.png" alt="Unity Stores">
+                      </div>
+                    </li>
+                    <li class="glide__slide">
+                      <div class="glide-card">
+                        <img src="public/images/customers/Logo-Urban-Outfitters.png" alt="Urban Outfitters">
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="container-fluid">
+      <div class="container">
         <div class="footer__wrapper">
           <div class="copyright" id="Copyright">
             © 2023 PlusDenim. All Rights Reserved.
@@ -175,5 +299,31 @@
     </footer>
 
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- UIkit JS -->
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.14/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.14/dist/js/uikit-icons.min.js"></script>
+    <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
+
+    <script>
+      var glideMulti1 = new Glide(".multi1", {
+        type: "carousel",
+        autoplay: 2000,
+        gap: 12,
+        perView: 6,
+        breakpoints: {
+          767: {
+            perView: 2,
+          },
+          1024: {
+            perView: 3,
+          },
+        },
+        peek: {
+          before: 100,
+          after: 0,
+        },
+      });
+      glideMulti1.mount();
+    </script>
   </body>
 </html>

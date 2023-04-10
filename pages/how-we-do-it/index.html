@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PLUSDENIM.COM</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="57x57"
+      href="/public/images/icons/apple-icon-57x57.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="60x60"
+      href="/public/images/icons/apple-icon-60x60.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="72x72"
+      href="/public/images/icons/apple-icon-72x72.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="76x76"
+      href="/public/images/icons/apple-icon-76x76.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="114x114"
+      href="/public/images/icons/apple-icon-114x114.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="120x120"
+      href="/public/images/icons/apple-icon-120x120.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="144x144"
+      href="/public/images/icons/apple-icon-144x144.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="152x152"
+      href="/public/images/icons/apple-icon-152x152.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/images/icons/apple-icon-180x180.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/public/images/icons/android-icon-192x192.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/images/icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/public/images/icons/favicon-96x96.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/images/icons/favicon-16x16.png"
+    />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta
+      name="msapplication-TileImage"
+      content="/public/images/icons/ms-icon-144x144.png"
+    />
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#d52b1e" />
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#d52b1e" />
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#d52b1e" />
+    <link rel="stylesheet" type="text/css" href="/assets/scss/util-dist.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/index.css" />
+    <!-- Javascripts -->
+    <script
+      type="text/javascript"
+      src="/assets/js/languages/multilang.js"
+    ></script>
+    <script type="text/javascript" src="/assets/js/languages/index.js"></script>
+  </head>
+
+  <body onload="onLoad()">
+    <header class="header">
+      <div class="container-fluid">
+        <div class="header__wrapper">
+          <a href="/" class="logo">
+            <img
+              src="/public/images/plusdenim-white-logo_2x.png"
+              alt="plus denim logo"
+              title="plus denim logo"
+              width="85"
+              height="45"
+          /></a>
+
+          <input class="side-menu" type="checkbox" id="side-menu" />
+          <label class="hamb" for="side-menu"
+            ><span class="hamb-line"></span
+          ></label>
+
+          <nav class="navigation">
+            <ul class="menu">
+              <li>
+                <a href="/#linkAboutUs" id="AboutUs" uk-scroll="offset: 100"></a>
+              </li>
+              <li>
+                <a
+                  href="/#linkWhatWeDo"
+                  id="WhatWeDo"
+                  uk-scroll="offset: 100"
+                ></a>
+              </li>
+              <li><a href="/#linkContact" id="Contact"></a></li>
+            </ul>
+            <select
+              class="languagesSelect"
+              name="listlanguages"
+              onchange="langSelectChange(this)"
+            ></select>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__wrapper">
+          <div class="copyright" id="Copyright">
+            © 2023 PlusDenim. All Rights Reserved.
+          </div>
+          <div class="social-media"></div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+  </body>
+</html>

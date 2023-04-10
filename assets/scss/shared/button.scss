@@ -1,0 +1,39 @@
+@import "colors";
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    max-width: max-content;
+    height: 34px;
+    font-size: 16px;
+    color: $white;
+    padding: 0 16px;
+    background-color: $primary_light;
+    border: 1px solid $primary_light;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border-radius: 5px;
+    transition: 0.2s linear;
+
+    &:hover {
+        -webkit-box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.7);
+        box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.7);
+    }
+
+    &--outline {
+        background-color: transparent;
+
+        &:hover {
+            background-color: $primary_light;
+        }
+    }
+}

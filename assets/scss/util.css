@@ -16,14 +16,21 @@ body, html {
 	display: grid;
     grid-auto-rows: auto 1fr auto;
 	font-family: 'Poppins', sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	color: #333;
-
+	scroll-behavior: smooth;
 	height: 100%;
 	background-color: #fff;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+
+@media screen and (min-width: 768px) {
+	body, html {
+		font-size: 16px;
+	}
 }
 
 /*---------------------------------------------*/
