@@ -136,7 +136,7 @@
                 <a
                   href="#linkWhatWeDo"
                   id="WhatWeDo"
-                  uk-scroll="offset: 100"
+                  uk-scroll="offset: 300"
                 ></a>
               </li>
               <li><a href="#linkContact" id="Contact"></a></li>
@@ -236,47 +236,74 @@
                   <ul class="glide__slides">
                     <li class="glide__slide">
                       <div class="glide-card">
-                        <img src="public/images/customers/Logo-Adolfo-Dominguez.png" alt="Adolfo Dominguez">
+                        <img
+                          src="public/images/customers/Logo-Adolfo-Dominguez.png"
+                          alt="Adolfo Dominguez"
+                        />
                       </div>
                     </li>
                     <li class="glide__slide">
                       <div class="glide-card">
-                        <img src="public/images/customers/Logo-Froens.png" alt="Froens">
+                        <img
+                          src="public/images/customers/Logo-Froens.png"
+                          alt="Froens"
+                        />
                       </div>
                     </li>
                     <li class="glide__slide">
                       <div class="glide-card">
-                        <img src="public/images/customers/Logo-Inditex.png" alt="Inditex">
+                        <img
+                          src="public/images/customers/Logo-Inditex.png"
+                          alt="Inditex"
+                        />
                       </div>
                     </li>
                     <li class="glide__slide">
                       <div class="glide-card">
-                        <img src="public/images/customers/Logo-Ivy-Oak.png" alt="Ivy Oak">
+                        <img
+                          src="public/images/customers/Logo-Ivy-Oak.png"
+                          alt="Ivy Oak"
+                        />
                       </div>
                     </li>
                     <li class="glide__slide">
                       <div class="glide-card">
-                        <img src="public/images/customers/Logo-Monastery.png" alt="Monastery">
+                        <img
+                          src="public/images/customers/Logo-Monastery.png"
+                          alt="Monastery"
+                        />
                       </div>
                     </li>
                     <li class="glide__slide">
                       <div class="glide-card">
-                        <img src="public/images/customers/Logo-NP-2.png" alt="NP">
+                        <img
+                          src="public/images/customers/Logo-NP-2.png"
+                          alt="NP"
+                        />
                       </div>
                     </li>
                     <li class="glide__slide">
                       <div class="glide-card">
-                        <img src="public/images/customers/Logo-Simons.png" alt="Simons">
+                        <img
+                          src="public/images/customers/Logo-Simons.png"
+                          alt="Simons"
+                        />
                       </div>
                     </li>
                     <li class="glide__slide">
                       <div class="glide-card">
-                        <img src="public/images/customers/Logo-Unity-Stores.png" alt="Unity Stores">
+                        <img
+                          src="public/images/customers/Logo-Unity-Stores.png"
+                          alt="Unity Stores"
+                        />
                       </div>
                     </li>
                     <li class="glide__slide">
                       <div class="glide-card">
-                        <img src="public/images/customers/Logo-Urban-Outfitters.png" alt="Urban Outfitters">
+                        <img
+                          src="public/images/customers/Logo-Urban-Outfitters.png"
+                          alt="Urban Outfitters"
+                        />
                       </div>
                     </li>
                   </ul>
@@ -297,11 +324,14 @@
         </div>
       </div>
     </footer>
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <!-- Back to top button -->
+    <a class="backtotop">
+      <img src="/public/images/up-arrow.svg" alt="back to top" width="18">
+    </a>
+    <script src="/assets/js/jquery-2.2.4.min.js"></script>
     <!-- UIkit JS -->
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.14/dist/js/uikit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/uikit@3.16.14/dist/js/uikit-icons.min.js"></script>
+    <script src="/assets/js/uikit.min.js"></script>
+    <script src="/assets/js/uikit-icons.min.js"></script>
     <script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>
 
     <script>
@@ -312,7 +342,7 @@
         perView: 6,
         breakpoints: {
           767: {
-            perView: 2,
+            perView: 1,
           },
           1024: {
             perView: 3,
@@ -320,7 +350,7 @@
         },
         peek: {
           before: 100,
-          after: 0,
+          after: 100,
         },
       });
       glideMulti1.mount();

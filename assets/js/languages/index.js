@@ -25,6 +25,32 @@ function onLoad() {
   // alternatively
   //multilang = new MultiLang('languages.json', null, this.initList); // default to browser language
   //multilang = new MultiLang('languages.json'); // only load JSON, no callback
+
+  for (
+    let i = 0;
+    i < document.querySelectorAll(".navigation .menu a").length;
+    i++
+  ) {
+    const e = document.querySelectorAll(".navigation .menu a")[i];
+    e.addEventListener("click", () => {
+      document.getElementById("side-menu").checked = false;
+    });
+  }
+
+  var btn = $(".backtotop");
+
+  $(window).scroll(function () {
+    if ($(window).scrollTop() > 300) {
+      btn.addClass("show");
+    } else {
+      btn.removeClass("show");
+    }
+  });
+
+  btn.on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, "300");
+  });
 }
 
 function langSelectChange(sel) {
@@ -67,7 +93,12 @@ function refreshLabels() {
     // get id current elements
     var idname = allnodes[i].id;
     // if id exists, set get id current elements
-    if (idname != "" && idname != "linkAboutUs" && idname != "linkWhatWeDo" && idname != "linkContact") {
+    if (
+      idname != "" &&
+      idname != "linkAboutUs" &&
+      idname != "linkWhatWeDo" &&
+      idname != "linkContact"
+    ) {
       allnodes[i].textContent = multilang.get(idname);
     }
   }
