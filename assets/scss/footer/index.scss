@@ -2,19 +2,137 @@
 
 .footer {
     background-color: $primary;
+    padding: 15px 0px;
 
     &__wrapper {
         display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 50px;
+        align-items: space-between;
+        justify-content: center;
+        flex-direction: column;
+        grid-gap: 15px;
+
+        .information {
+            display: grid;
+            grid-gap: 32px;
+
+            &__left-side {
+                display: grid;
+                grid-gap: 16px;
+
+                .sections {
+                    display: grid;
+                    grid-gap: 4px;
+
+                    .adresses {
+                        display: grid;
+                        grid-gap: 8px;
+                    }
+                }
+
+                .title {
+                    position: relative;
+                    width: max-content;
+                    font-size: 20px;
+                    color: $white;
+
+                    &::after {
+                        content: "";
+                        height: 2px;
+                        width: 105%;
+                        position: absolute;
+                        background: $white;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+
+                .subtitle {
+                    font-size: 16px;
+                    color: $white;
+                    font-weight: 500;
+                }
+
+                .explanation {
+                    font-size: 14px;
+                    color: $black;
+
+                    a {
+                        color: $black;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .clientmap {
+                width: 100%;
+            }
+        }
+
+        .instagram-account {
+            display: grid;
+            grid-gap: 4px;
+
+            .title {
+                display: flex;
+                grid-gap: 6px;
+                color: $white;
+                font-weight: 400;
+
+                a {
+                    color: $black;
+                    text-decoration: underline;
+                }
+            }
+
+            .explanation {
+                font-size: 14px;
+                color: $black;
+            }
+        }
 
         .copyright {
             font-size: 12px;
             color: $white;
+            border-top: 1px solid $white;
+            padding-top: 10px;
         }
+    }
+}
 
-        .social-media {
+@media screen and (min-width: 768px) {
+    .footer {
+        &__wrapper {
+            .information {
+                grid-template-columns: 1fr auto;
+
+                .clientmap {
+                    width: 360px;
+                }
+            }
+
+            .copyright {
+                font-size: 14px;
+                color: $white;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer {
+        padding: 30px 0px;
+
+        &__wrapper {
+            grid-gap: 30px;
+
+            .information {
+                .clientmap {
+                    width: 570px;
+                }
+            }
+
+            .copyright {
+                padding-top: 20px;
+            }
         }
     }
 }

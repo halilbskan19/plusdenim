@@ -108,7 +108,7 @@
     <script type="text/javascript" src="/assets/js/languages/index.js"></script>
   </head>
 
-  <body onload="onLoad()" style="overflow: hidden;">
+  <body onload="onLoad()" style="overflow: hidden">
     <header class="header">
       <div class="container-fluid">
         <div class="header__wrapper">
@@ -316,13 +316,58 @@
         </div>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer" id="linkContact">
       <div class="container">
         <div class="footer__wrapper">
+          <div class="information">
+            <div class="information__left-side">
+              <h3 class="title" id="Contact"></h3>
+              <div class="sections">
+                <h5 class="subtitle" id="WhereAreWe"></h5>
+                <p class="explanation" id="WhereAreWeText"></p>
+              </div>
+              <div class="sections">
+                <h5 class="subtitle" id="OurAddress"></h5>
+                <p class="explanation" id="OurAddressText"></p>
+              </div>
+              <div class="sections">
+                <h5 class="subtitle" id="ContactUsVia"></h5>
+                <div class="adresses">
+                  <p class="explanation">
+                    <a
+                      href="mailto:info@plus-denim.com
+                    "
+                      target="_blank"
+                    >
+                      info@plus-denim.com
+                    </a>
+                  </p>
+                  <p class="explanation">
+                    <a href="https://www.plusdenim.com" target="_blank"
+                      >www.plusdenim.com</a
+                    >
+                  </p>
+                  <p class="explanation">
+                    <a href="tel:+902125157587"
+                      >+90 212 515 75 87
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <img
+              src="/public/images/footer/world-map-clients.png"
+              alt="world map clients"
+              class="clientmap"
+            />
+          </div>
+          <div class="instagram-account">
+            <h5 class="title">Instagram: <a href="https://www.instagram.com/shecassual/" target="_blank">@shecassual</a></h5>
+            <p class="explanation" id="InstagramAccountText"></p>
+          </div>
           <div class="copyright" id="Copyright">
             © 2023 PlusDenim. All Rights Reserved.
           </div>
-          <div class="social-media"></div>
         </div>
       </div>
     </footer>
@@ -331,7 +376,11 @@
       <img src="/public/images/up-arrow.svg" alt="back to top" width="18" />
     </a>
     <!-- Loading animation -->
-    <div class="plusdenim-heart"><div><img src="public/images/plusdenim-white-logo_2x.png" alt="loader"/></div></div>
+    <div class="plusdenim-heart">
+      <div>
+        <img src="public/images/plusdenim-white-logo_2x.png" alt="loader" />
+      </div>
+    </div>
     <script src="/assets/js/jquery-2.2.4.min.js"></script>
     <!-- UIkit JS -->
     <script src="/assets/js/uikit.min.js"></script>
