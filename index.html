@@ -87,7 +87,6 @@
     <meta name="msapplication-navbutton-color" content="#d52b1e" />
     <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#d52b1e" />
-    <link rel="stylesheet" type="text/css" href="/assets/scss/util-dist.css" />
     <!-- Required Core Stylesheet -->
     <link
       rel="stylesheet"
@@ -109,7 +108,7 @@
     <script type="text/javascript" src="/assets/js/languages/index.js"></script>
   </head>
 
-  <body onload="onLoad()">
+  <body onload="onLoad()" style="overflow: hidden;">
     <header class="header">
       <div class="container-fluid">
         <div class="header__wrapper">
@@ -138,6 +137,9 @@
                   id="WhatWeDo"
                   uk-scroll="offset: 300"
                 ></a>
+              </li>
+              <li>
+                <a href="/pages/our-factory/index.html" id="OurFactory"></a>
               </li>
               <li><a href="#linkContact" id="Contact"></a></li>
             </ul>
@@ -326,8 +328,10 @@
     </footer>
     <!-- Back to top button -->
     <a class="backtotop">
-      <img src="/public/images/up-arrow.svg" alt="back to top" width="18">
+      <img src="/public/images/up-arrow.svg" alt="back to top" width="18" />
     </a>
+    <!-- Loading animation -->
+    <div class="plusdenim-heart"><div><img src="public/images/plusdenim-white-logo_2x.png" alt="loader"/></div></div>
     <script src="/assets/js/jquery-2.2.4.min.js"></script>
     <!-- UIkit JS -->
     <script src="/assets/js/uikit.min.js"></script>
@@ -341,11 +345,17 @@
         gap: 12,
         perView: 6,
         breakpoints: {
-          767: {
+          480: {
             perView: 1,
+          },
+          640: {
+            perView: 2,
           },
           1024: {
             perView: 3,
+          },
+          1200: {
+            perView: 4,
           },
         },
         peek: {

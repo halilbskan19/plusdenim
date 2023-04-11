@@ -1,0 +1,57 @@
+@import "../../scss/util-dist.css";
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  height: 34px;
+  font-size: 16px;
+  color: #ffffff;
+  padding: 0 16px;
+  background-color: #ff5f53;
+  border: 1px solid #ff5f53;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-radius: 5px;
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+}
+.btn:hover {
+  -webkit-box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.7);
+  box-shadow: 0px 2px 8px -1px rgba(0, 0, 0, 0.7);
+}
+.btn--outline {
+  background-color: transparent;
+}
+.btn--outline:hover {
+  background-color: #ff5f53;
+}
+
+.main {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 40px;
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    grid-gap: 100px;
+    padding-bottom: 50px;
+  }
+}

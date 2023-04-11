@@ -1,6 +1,8 @@
 @import '/assets/css/shared/fonts.css';
 @import '/assets/css/header/index.css';
 @import '/assets/css/footer/index.css';
+@import '/assets/css/shared/backtotop.css';
+@import '/assets/css/shared/loader.css';
 
 /*//////////////////////////////////////////////////////////////////
 [ REBOOT ]*/

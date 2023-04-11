@@ -1,0 +1,19 @@
+@import "../../scss/util-dist.css", "../../scss/shared/colors", "../../scss/shared/button.scss";
+
+.main {
+    display: grid;
+    grid-gap: 40px;
+    padding-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        grid-gap: 100px;
+        padding-bottom: 50px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main {
+    }
+}

@@ -1,0 +1,48 @@
+@import "_colors";
+
+.plusdenim-heart {
+    display: inline-block;
+    position: fixed;
+    z-index: 101;
+    width: 100%;
+    height: 100%;
+    background-color: $primary;
+    transition: 0.2s ease-in-out all;
+
+    &.visible{
+        display: none;
+    }
+
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        animation: plusdenim-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+
+        img {
+            width: 180px;
+        }
+    }
+}
+
+@keyframes plusdenim-heart {
+    0% {
+        transform: scale(0.95);
+    }
+    5% {
+        transform: scale(1.1);
+    }
+    39% {
+        transform: scale(0.85);
+    }
+    45% {
+        transform: scale(1);
+    }
+    60% {
+        transform: scale(0.95);
+    }
+    100% {
+        transform: scale(0.9);
+    }
+}

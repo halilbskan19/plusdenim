@@ -1,0 +1,44 @@
+@import "_colors";
+
+.backtotop {
+    display: inline-block;
+    background-color: $primary_light;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 98;
+
+    &::after {
+        content: "";
+        background-image: url("/public/images/up-arrow.svg");
+        font-family: FontAwesome;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 2em;
+        line-height: 50px;
+        color: $white;
+    }
+
+    &.show {
+        opacity: 0.8;
+        visibility: visible;
+
+        &:hover {
+            cursor: pointer;
+            background-color: $primary;
+            opacity: 1;
+        }
+
+        &:active {
+            background-color: $primary;
+            opacity: 1;
+        }
+    }
+}

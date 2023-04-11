@@ -38,6 +38,7 @@ function onLoad() {
   }
 
   var btn = $(".backtotop");
+  var lastScrollTop = 0;
 
   $(window).scroll(function () {
     if ($(window).scrollTop() > 300) {
@@ -45,6 +46,19 @@ function onLoad() {
     } else {
       btn.removeClass("show");
     }
+
+    var st = $(this).scrollTop();
+    if (st > lastScrollTop) {
+      // downscroll code
+      $(".header").removeClass("sticky");
+    } else {
+      // upscroll code
+      if (lastScrollTop - $(window).scrollTop() < 300) {
+        return;
+      }
+      $(".header").addClass("sticky");
+    }
+    lastScrollTop = st;
   });
 
   btn.on("click", function (e) {
@@ -60,6 +74,7 @@ function langSelectChange(sel) {
 
   // refresh labels
   refreshLabels();
+  location.reload();
 }
 
 function initList() {
@@ -102,4 +117,11 @@ function refreshLabels() {
       allnodes[i].textContent = multilang.get(idname);
     }
   }
+
+  setTimeout(() => {
+    document.body.style.overflow = "";
+    document
+      .getElementsByClassName("plusdenim-heart")[0]
+      .classList.add("visible");
+  }, 1000);
 }

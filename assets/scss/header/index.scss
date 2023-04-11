@@ -7,6 +7,10 @@
     box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.15);
     z-index: 99;
 
+    &.sticky {
+        position: sticky;
+    }
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
