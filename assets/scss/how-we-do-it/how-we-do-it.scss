@@ -2,18 +2,128 @@
 
 .main {
     display: grid;
-    grid-gap: 40px;
+    grid-gap: 20px;
     padding-bottom: 20px;
+
+    .page-title-background {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        background-image: url("/public/images/how-we-do-it/title-background.jpg");
+        background-size: cover;
+        background-position: center center;
+
+        .pagetitle {
+            font-size: 24px;
+            color: $white;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    .services {
+        &__wrapper {
+            display: grid;
+            grid-gap: 16px;
+
+            .boxes {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-gap: 12px;
+            }
+
+            .box {
+                display: grid;
+                grid-gap: 12px;
+                padding: 12px;
+                border-radius: 4px;
+                box-shadow: 0px 1px 4px -1px rgba(0, 0, 0, 0.7);
+
+                &__image {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                &__content {
+                    display: grid;
+                    grid-gap: 4px;
+                    text-align: center;
+
+                    .title {
+                        font-size: 18px;
+                        color: $primary_light;
+                    }
+
+                    .explanation {
+                        font-size: 14px;
+                        color: $black_light;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
     .main {
-        grid-gap: 100px;
+        grid-gap: 40px;
         padding-bottom: 50px;
+
+        .page-title-background {
+            height: 150px;
+        }
+
+        .services {
+            &__wrapper {
+                .boxes {
+                    grid-template-columns: 1fr 1fr;
+                    grid-gap: 24px;
+                }
+
+                .box {
+                    grid-gap: 18px;
+                    padding: 18px;
+                    border-radius: 8px;
+                    grid-template-rows: auto 1fr;
+
+                    &__content {
+                        grid-gap: 8px;
+                        text-align: center;
+                        grid-template-rows: auto 1fr;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media screen and (min-width: 1200px) {
     .main {
+        .page-title-background {
+            height: 200px;
+
+            .pagetitle {
+                font-size: 36px;
+            }
+        }
+
+        .services {
+            &__wrapper {
+                .boxes {
+                    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                    grid-gap: 72px;
+                }
+
+                .box {
+                    &__image {
+                        img {
+                            width: 120px;
+                            height: 120px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
