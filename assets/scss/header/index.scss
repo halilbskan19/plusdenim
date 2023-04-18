@@ -8,7 +8,8 @@
     z-index: 99;
 
     &.sticky {
-        position: sticky;
+        position: fixed;
+        width: 100%;
     }
 
     &__wrapper {
@@ -62,17 +63,72 @@
             left: 0;
             max-height: 0;
             transition: max-height 0.5s ease-out;
+            overflow: auto;
         }
 
         .menu {
-            a {
+            a,
+            span {
                 display: block;
                 padding: 18px 15px 17px;
                 color: $white;
                 text-decoration: none;
+                cursor: pointer;
 
                 &:hover {
                     background-color: $primary_light;
+                }
+            }
+
+            .mega-menu {
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    right: 15px;
+                    top: 24px;
+                    width: 0px;
+                    height: 0px;
+                    border-style: solid;
+                    border-width: 9px 8px 0 8px;
+                    border-color: $white transparent transparent transparent;
+                    transform: rotate(0deg);
+                }
+
+                &__wrapper {
+                    display: none;
+                    background: $primary_light;
+                    padding: 0px 15px 15px;
+                    grid-gap: 15px;
+                }
+
+                &:hover {
+                    .mega-menu__wrapper {
+                        display: grid;
+                    }
+                }
+
+                &__item {
+                    &:first-child {
+                        display: none;
+                    }
+
+                    .link {
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        text-decoration: underline;
+                        padding-bottom: 5px;
+
+                        ~ ul {
+                            li {
+                                a {
+                                    text-transform: capitalize;
+                                    padding: 5px 15px;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -138,6 +194,8 @@
 
 @media (min-width: 1200px) {
     .header {
+        position: sticky;
+
         &__wrapper {
             .logo {
                 padding-left: 30px;
@@ -158,6 +216,61 @@
 
                 a:hover {
                     color: $white;
+                }
+
+                .mega-menu {
+                    &::after {
+                        display: none;
+                    }
+
+                    > a {
+                        &:hover {
+                            & ~ .mega-menu__wrapper {
+                                display: grid;
+                            }
+                        }
+                    }
+
+                    &__wrapper {
+                        display: none;
+                        position: fixed;
+                        left: 0;
+                        width: 100%;
+                        background: $primary-light;
+                        grid-template-columns: 2fr 1fr 1fr 1fr;
+                        padding: 15px 30px;
+
+                        &:hover {
+                            display: grid;
+                        }
+                    }
+
+                    &__item {
+                        &:first-child {
+                            display: block;
+                        }
+
+                        img {
+                            width: 300px;
+                            height: auto;
+                        }
+
+                        ul {
+                            li {
+                                a {
+                                    &.link {
+                                        padding-top: 0px;
+                                    }
+
+                                    width: max-content;
+
+                                    &:hover { 
+                                        text-decoration: underline;
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
 
