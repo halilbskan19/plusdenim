@@ -8,8 +8,7 @@
     z-index: 99;
 
     &.sticky {
-        position: fixed;
-        width: 100%;
+        position: sticky;
     }
 
     &__wrapper {
