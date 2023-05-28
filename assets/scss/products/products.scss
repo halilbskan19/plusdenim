@@ -1,0 +1,97 @@
+@import "../../scss/util-dist.css", "../../scss/shared/colors", "../../scss/shared/button.scss";
+
+.main {
+    display: grid;
+    grid-gap: 20px;
+    padding-bottom: 20px;
+
+    .page-title-background {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 120px;
+        background-image: url("/public/images/flat-lay-present-with-citrus-slice-copy-space.jpg");
+        background-size: cover;
+        background-position: center bottom;
+
+        .pagetitle {
+            font-size: 24px;
+            color: $black;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    .product {
+        &__wrapper {
+            display: grid;
+            grid-template-columns: minmax(100px, 1fr) repeat(1, minmax(100px, 1fr));
+            grid-gap: 16px;
+        }
+
+        &__card {
+            .product-slider {
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+
+                &__slide {
+                    max-height: 235px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .main {
+        grid-gap: 40px;
+        padding-bottom: 50px;
+
+        .page-title-background {
+            height: 150px;
+            background-position: center -55%;
+        }
+
+        .product {
+            &__wrapper {
+                grid-template-columns: minmax(100px, 1fr) repeat(3, minmax(100px, 1fr));
+            }
+
+            &__card {
+                .product-slider {
+                    &__slide {
+                        max-height: 245px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .main {
+        .page-title-background {
+            height: 200px;
+
+            .pagetitle {
+                font-size: 36px;
+            }
+        }
+
+        .product {
+            &__wrapper {
+                grid-template-columns: minmax(100px, 1fr) repeat(5, minmax(100px, 1fr));
+            }
+
+            &__card {
+                .product-slider {
+                    &__slide {
+                        max-height: 380px;
+                    }
+                }
+            }
+        }
+    }
+}

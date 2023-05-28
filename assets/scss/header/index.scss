@@ -113,11 +113,11 @@
                         display: none;
                     }
 
-                    .link {
+                    .menu-title {
                         font-weight: 600;
                         text-transform: uppercase;
-                        text-decoration: underline;
                         padding-bottom: 5px;
+                        cursor: default;
 
                         ~ ul {
                             li {
@@ -256,16 +256,12 @@
 
                         ul {
                             li {
-                                a {
-                                    &.link {
+                                span {
+                                    &.menu-title {
                                         padding-top: 0px;
                                     }
 
                                     width: max-content;
-
-                                    &:hover { 
-                                        text-decoration: underline;
-                                    }
                                 }
                             }
                         }
