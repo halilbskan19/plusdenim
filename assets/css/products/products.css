@@ -72,16 +72,40 @@
 .main .product__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: minmax(100px, 1fr) 16px minmax(100px, 1fr);
+  -ms-grid-columns: minmax(100px, 1fr) 24px minmax(100px, 1fr);
   grid-template-columns: minmax(100px, 1fr) repeat(1, minmax(100px, 1fr));
-  grid-gap: 16px;
+  grid-gap: 40px 24px;
+}
+.main .product__card .product-slider {
+  margin-bottom: 8px;
 }
 .main .product__card .product-slider img {
   width: 100%;
   height: auto;
 }
-.main .product__card .product-slider__slide {
-  max-height: 235px;
+.main .product__card .glide__arrow {
+  display: none;
+}
+.main .product__card .thumbnails {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 8px;
+  -ms-grid-columns: 1fr 8px 1fr 8px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  max-height: 100px;
+  overflow: hidden;
+}
+.main .product__card .thumbnails a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.main .product__card .thumbnails img {
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 768px) {
@@ -94,11 +118,8 @@
     background-position: center -55%;
   }
   .main .product__wrapper {
-    -ms-grid-columns: minmax(100px, 1fr) 16px minmax(100px, 1fr) 16px minmax(100px, 1fr) 16px minmax(100px, 1fr);
+    -ms-grid-columns: minmax(100px, 1fr) 24px minmax(100px, 1fr) 24px minmax(100px, 1fr) 24px minmax(100px, 1fr);
     grid-template-columns: minmax(100px, 1fr) repeat(3, minmax(100px, 1fr));
-  }
-  .main .product__card .product-slider__slide {
-    max-height: 245px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -109,10 +130,24 @@
     font-size: 36px;
   }
   .main .product__wrapper {
-    -ms-grid-columns: minmax(100px, 1fr) 16px minmax(100px, 1fr) 16px minmax(100px, 1fr) 16px minmax(100px, 1fr) 16px minmax(100px, 1fr) 16px minmax(100px, 1fr);
+    -ms-grid-columns: minmax(100px, 1fr) 24px minmax(100px, 1fr) 24px minmax(100px, 1fr) 24px minmax(100px, 1fr) 24px minmax(100px, 1fr) 24px minmax(100px, 1fr);
     grid-template-columns: minmax(100px, 1fr) repeat(5, minmax(100px, 1fr));
   }
-  .main .product__card .product-slider__slide {
-    max-height: 380px;
+  .main .product .glide__arrow {
+    display: block;
+    padding: 6px 9px;
+    background: rgba(255, 255, 255, 0.5);
+  }
+  .main .product .glide__arrow:hover {
+    background: #ffffff;
+  }
+  .main .product .glide__arrow svg {
+    fill: #ff5f53;
+    stroke: #ff5f53;
+    width: 18px;
+    height: 12px;
+  }
+  .main .product .glide__arrow--next {
+    right: 0;
   }
 }

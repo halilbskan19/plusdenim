@@ -100,10 +100,8 @@
                     background: $primary_light;
                     padding: 0px 15px 15px;
                     grid-gap: 15px;
-                }
 
-                &:hover {
-                    .mega-menu__wrapper {
+                    &.opened {
                         display: grid;
                     }
                 }
@@ -124,6 +122,10 @@
                                 a {
                                     text-transform: capitalize;
                                     padding: 5px 15px;
+
+                                    &:hover {
+                                        text-decoration: underline;
+                                    }
                                 }
                             }
                         }
@@ -240,6 +242,12 @@
                         padding: 15px 30px;
 
                         &:hover {
+                            display: grid;
+                        }
+                    }
+
+                    &:hover {
+                        .mega-menu__wrapper {
                             display: grid;
                         }
                     }

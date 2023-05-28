@@ -15,3 +15,21 @@ for (let i = 0; i < arr.length; i++) {
     document.body.style.overflow = "";
   });
 }
+
+function isTouchDevice() {
+  return (
+    "ontouchstart" in window ||
+    navigator.maxTouchPoints > 0 ||
+    navigator.msMaxTouchPoints > 0
+  );
+}
+
+if (isTouchDevice()) {
+  document
+    .getElementsByClassName("js-mega-menu-click")[0]
+    .addEventListener("click", () => {
+      document
+        .getElementsByClassName("mega-menu__wrapper")[0]
+        .classList.toggle("opened");
+    });
+}

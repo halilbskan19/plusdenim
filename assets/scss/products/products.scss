@@ -26,18 +26,37 @@
         &__wrapper {
             display: grid;
             grid-template-columns: minmax(100px, 1fr) repeat(1, minmax(100px, 1fr));
-            grid-gap: 16px;
+            grid-gap: 40px 24px;
         }
 
         &__card {
             .product-slider {
+                margin-bottom: 8px;
                 img {
                     width: 100%;
                     height: auto;
                 }
+            }
 
-                &__slide {
-                    max-height: 235px;
+            .glide__arrow {
+                display: none;
+            }
+
+            .thumbnails {
+                display: grid;
+                grid-gap: 8px;
+                grid-template-columns: repeat(3, 1fr);
+                max-height: 100px;
+                overflow: hidden;
+
+                a {
+                    display: flex;
+                    align-items: flex-start;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
                 }
             }
         }
@@ -58,14 +77,6 @@
             &__wrapper {
                 grid-template-columns: minmax(100px, 1fr) repeat(3, minmax(100px, 1fr));
             }
-
-            &__card {
-                .product-slider {
-                    &__slide {
-                        max-height: 245px;
-                    }
-                }
-            }
         }
     }
 }
@@ -85,11 +96,24 @@
                 grid-template-columns: minmax(100px, 1fr) repeat(5, minmax(100px, 1fr));
             }
 
-            &__card {
-                .product-slider {
-                    &__slide {
-                        max-height: 380px;
-                    }
+            .glide__arrow {
+                display: block;
+                padding: 6px 9px;
+                background: rgba(255, 255, 255, 0.5);
+
+                &:hover {
+                    background: $white;
+                }
+
+                svg {
+                    fill: $primary_light;
+                    stroke: $primary_light;
+                    width: 18px;
+                    height: 12px;
+                }
+
+                &--next {
+                    right: 0;
                 }
             }
         }
