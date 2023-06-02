@@ -45,13 +45,102 @@
 .main {
   display: -ms-grid;
   display: grid;
-  grid-gap: 40px;
+  grid-gap: 20px;
   padding-bottom: 20px;
+}
+.main .page-title-background {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 120px;
+  background-image: url("/public/images/how-we-do-it/title-background.jpg");
+  background-size: cover;
+  background-position: center center;
+}
+.main .page-title-background .pagetitle {
+  font-size: 24px;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+}
+.main .our-factory__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
+  grid-gap: 90px 180px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.main .our-factory-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 8px;
+}
+.main .our-factory-box__image img {
+  width: 100%;
+  height: auto;
+}
+.main .our-factory-box__desc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  grid-gap: 8px;
+}
+.main .our-factory-box__desc .title {
+  font-size: 20px;
+}
+.main .our-factory-box__desc .desc {
+  font-size: 14px;
 }
 
 @media screen and (min-width: 768px) {
   .main {
-    grid-gap: 100px;
+    grid-gap: 40px;
     padding-bottom: 50px;
+  }
+  .main .page-title-background {
+    height: 150px;
+  }
+  .main .our-factory__wrapper {
+    -ms-grid-columns: 1fr 32px 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 64px 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .main .page-title-background {
+    height: 200px;
+  }
+  .main .page-title-background .pagetitle {
+    font-size: 36px;
+  }
+  .main .our-factory__wrapper {
+    grid-gap: 120px 180px;
+  }
+  .main .our-factory-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    grid-gap: 32px;
+  }
+  .main .our-factory-box__image img {
+    width: 360px;
   }
 }

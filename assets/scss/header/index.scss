@@ -100,6 +100,9 @@
                     background: $primary_light;
                     padding: 0px 15px 15px;
                     grid-gap: 15px;
+                    -webkit-box-shadow: 0px 4px 15px 1px rgba(0, 0, 0, 0.5);
+                    -moz-box-shadow: 0px 4px 15px 1px rgba(0, 0, 0, 0.5);
+                    box-shadow: 0px 4px 15px 1px rgba(0, 0, 0, 0.5);
 
                     &.opened {
                         display: grid;
@@ -116,15 +119,22 @@
                         text-transform: uppercase;
                         padding-bottom: 5px;
                         cursor: default;
+                        color: $black;
+
+                        &:hover {
+                            background-color: $white;
+                        }
 
                         ~ ul {
                             li {
                                 a {
+                                    color: $black;
                                     text-transform: capitalize;
                                     padding: 5px 15px;
 
                                     &:hover {
                                         text-decoration: underline;
+                                        background-color: $white;
                                     }
                                 }
                             }
@@ -237,7 +247,7 @@
                         position: fixed;
                         left: 0;
                         width: 100%;
-                        background: $primary-light;
+                        background: $white;
                         grid-template-columns: 2fr 1fr 1fr 1fr;
                         padding: 15px 30px;
 
