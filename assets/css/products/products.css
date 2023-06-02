@@ -77,6 +77,8 @@
   grid-gap: 40px 24px;
 }
 .main .product__card .product-slider {
+  max-height: 242px;
+  overflow: hidden;
   margin-bottom: 8px;
 }
 .main .product__card .product-slider img {
@@ -92,6 +94,7 @@
   grid-gap: 8px;
   -ms-grid-columns: 1fr 8px 1fr 8px 1fr;
   grid-template-columns: repeat(3, 1fr);
+  max-height: 72px;
   overflow: hidden;
 }
 .main .product__card .thumbnails a {
@@ -120,6 +123,12 @@
     -ms-grid-columns: minmax(100px, 1fr) 24px minmax(100px, 1fr) 24px minmax(100px, 1fr) 24px minmax(100px, 1fr);
     grid-template-columns: minmax(100px, 1fr) repeat(3, minmax(100px, 1fr));
   }
+  .main .product__card .product-slider {
+    max-height: 240px;
+  }
+  .main .product__card .thumbnails {
+    max-height: 75px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .main .page-title-background {
@@ -131,6 +140,12 @@
   .main .product__wrapper {
     -ms-grid-columns: minmax(100px, 1fr) 24px minmax(100px, 1fr) 24px minmax(100px, 1fr) 24px minmax(100px, 1fr) 24px minmax(100px, 1fr) 24px minmax(100px, 1fr);
     grid-template-columns: minmax(100px, 1fr) repeat(5, minmax(100px, 1fr));
+  }
+  .main .product__card .product-slider {
+    max-height: 577px;
+  }
+  .main .product__card .thumbnails {
+    max-height: 183px;
   }
   .main .product .glide__arrow {
     display: block;

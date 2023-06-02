@@ -31,7 +31,10 @@
 
         &__card {
             .product-slider {
+                max-height: 242px;
+                overflow: hidden;
                 margin-bottom: 8px;
+
                 img {
                     width: 100%;
                     height: auto;
@@ -46,6 +49,7 @@
                 display: grid;
                 grid-gap: 8px;
                 grid-template-columns: repeat(3, 1fr);
+                max-height: 72px;
                 overflow: hidden;
 
                 a {
@@ -76,6 +80,16 @@
             &__wrapper {
                 grid-template-columns: minmax(100px, 1fr) repeat(3, minmax(100px, 1fr));
             }
+
+            &__card {
+                .product-slider {
+                    max-height: 240px;
+                }
+
+                .thumbnails {
+                    max-height: 75px;
+                }
+            }
         }
     }
 }
@@ -93,6 +107,16 @@
         .product {
             &__wrapper {
                 grid-template-columns: minmax(100px, 1fr) repeat(5, minmax(100px, 1fr));
+            }
+
+            &__card {
+                .product-slider {
+                    max-height: 577px;
+                }
+
+                .thumbnails {
+                    max-height: 183px;
+                }
             }
 
             .glide__arrow {
