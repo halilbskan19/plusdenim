@@ -78,6 +78,14 @@ function langSelectChange(sel) {
 }
 
 function initList() {
+
+  setTimeout(() => {
+    document.body.style.overflow = "";
+    document
+      .getElementsByClassName("plusdenim-heart")[0]
+      .classList.add("visible");
+  }, 1000);
+  
   // get language list element
   var list = document.getElementsByName("listlanguages")[0];
   // clear all options
@@ -117,11 +125,4 @@ function refreshLabels() {
       allnodes[i].textContent = multilang.get(idname);
     }
   }
-
-  setTimeout(() => {
-    document.body.style.overflow = "";
-    document
-      .getElementsByClassName("plusdenim-heart")[0]
-      .classList.add("visible");
-  }, 1000);
 }
